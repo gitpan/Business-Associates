@@ -1,0 +1,12 @@
+\bCVS\b
+\bMANIFEST$
+\bMakefile$
+\bMakefile.old$
+\~$
+\btar\b
+^blib\b
+^pm_to_blib$
+\b\.zip$
+^Business-Associates-?.??/
+\.sig$
+\.asc$

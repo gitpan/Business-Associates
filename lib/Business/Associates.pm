@@ -1,4 +1,4 @@
-## $Id: Associates.pm,v 1.3 2002/04/02 07:10:48 allane Exp $
+## $Id: Associates.pm,v 1.4 2002/04/28 16:02:09 allane Exp $
 ## Associates package: Routines to handle Amazon.com XML interface
 ##                     for Amazon Associates.
 ## Associates - Documentation and global version number.
@@ -52,7 +52,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.98';
+our $VERSION = '1.00';
 
 
 # Preloaded methods go here.

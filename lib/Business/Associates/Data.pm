@@ -1,4 +1,4 @@
-## $Id: Data.pm,v 1.2 2002/04/02 06:57:53 allane Exp $
+## $Id: Data.pm,v 1.3 2002/04/18 18:10:47 allane Exp $
 ##
 ## Associates package: Routines to handle Amazon.com XML interface
 ##                     for Amazon Associates.
@@ -36,7 +36,7 @@ use Business::Associates::Cache();
 BEGIN {
     use Exporter();
     our ($VERSION, @ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS);
-    $VERSION = do { my @r = (q$Revision: 1.2 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+    $VERSION = do { my @r = (q$Revision: 1.3 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
     @ISA = qw(Exporter);
     @EXPORT = qw();
     @EXPORT_OK = qw($Associates_Id keywords browse);
@@ -95,7 +95,6 @@ sub browse {
     my $mode = shift;
     my $id = shift || $Associates_Id;
     my $url = qq{http://rcm.amazon.com/e/cm?t=$id&l=bn1&browse=$browse_id&mode=$mode&p=102&o=1&f=xml};
-    print STDERR $url, "\n";
     my $data = get_it($url);
     my $self  = { xml => $data };
     bless ($self, $class);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-## $Id: Associates_do.xslt,v 1.1 2002/04/01 22:13:10 allane Exp $
+## $Id: Associates_do.xslt,v 1.3 2002/04/28 16:00:53 allane Exp $
 ##
 ## Copyright (c) 2002 Allan Engelhardt <allane@cybaea.com>
 ##
@@ -73,6 +73,28 @@
      </xsl:call-template>
     </a>
    </div><xsl:value-of select="$newline" />
+
+   <div class="A_our_price">
+    <xsl:value-of select="our_price" />
+   </div><xsl:value-of select="$newline" />
+
+   <div class="A_list_price">
+    <xsl:value-of select="list_price" />
+   </div><xsl:value-of select="$newline" />
+
+   <xsl:variable name="list">
+    <xsl:value-of select="translate(list_price, '$£¥', '')" />
+   </xsl:variable>
+
+   <xsl:variable name="our">
+    <xsl:value-of select="translate(our_price, '$£¥', '')" />
+   </xsl:variable>
+
+   <xsl:if test="$list &gt; 0 and $our &gt; 0">
+    <div class="A__save_percent">
+     <xsl:value-of select="format-number(($list - $our) div $list, '##%')" />
+    </div>
+   </xsl:if>
 
    <div class="A_release_date">
     <xsl:value-of select="release_date" />

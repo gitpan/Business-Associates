@@ -1,0 +1,13 @@
+TO DO LIST FOR Business::Associates PACKAGE
+===========================================
+; Copyright (C) 2002 by Allan Engelhardt
+
+* Support a "New Best Sellers Since..." functionality (e.g. new best
+  sellers since your last visit to this site).
+
+* Support custom links for the static images in the ads.
+
+* Better support for in-line links.
+
+----------------------------------------------------------------------------
+$Id: TODO,v 1.1 2002/04/19 13:06:17 allane Exp $

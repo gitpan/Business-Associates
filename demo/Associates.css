@@ -1,5 +1,5 @@
 @charset "ISO-8859-1";
-/* $Id: Associates.css,v 1.2 2002/04/02 08:32:37 allane Exp $ */
+/* $Id: Associates.css,v 1.4 2002/04/28 16:01:10 allane Exp $ */
 /* Associates.css - Default stylesheet for the Associates package */
 /*
 
@@ -32,6 +32,10 @@ div.Associates {
 	page-break-inside:	avoid;
 	margin-top:		0.5ex;
 	margin-bottom:		0.5ex;
+}
+
+div.Associates img {
+	border-style:		none;
 }
 
 div.Associates > div > table {
@@ -106,6 +110,28 @@ div.Associates table.A__data_table td.A__text div.A_title {
 
 div.Associates table.A__data_table td.A__text div.A_title {
 	font-style:		italic;
+}
+
+div.Associates table.A__data_table td.A__text div.A_our_price:before {
+	content:		"Price: ";
+}
+
+div.Associates table.A__data_table td.A__text div.A_list_price {
+	display:		none;
+}
+
+div.Associates table.A__data_table td.A__text div.A__save_percent:before {
+	content:		"(Save ";
+	font-weight:		bold;
+}
+
+div.Associates table.A__data_table td.A__text div.A__save_percent {
+	font-weight:		bold;
+}
+
+div.Associates table.A__data_table td.A__text div.A__save_percent:after {
+	content:		")";
+	font-weight:		bold;
 }
 
 div.Associates table.A__data_table td.A__text div.A_release_date:before {
