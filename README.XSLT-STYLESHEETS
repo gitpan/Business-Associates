@@ -1,0 +1,16 @@
+The images referenced in the style sheets and examples are from
+
+https://ssl-images.amazon.com/images/G/01/associates/logos2000/a150X75w.gif
+https://ssl-images.amazon.com/images/G/01/associates/logos2000/126X32-w-logo.gif
+https://ssl-images.amazon.com/images/G/01/associates/photo2000/cp_pic_88x31.gif
+
+They are not provided here: you'll need an Amazon.com Associates
+account to download them.
+
+The scripts and style sheets provided expects to find these files in
+the  'amazon/'  sub-directory under your web server's document root.
+
+------------------------------------------------------------------------
+$Id: README.XSLT-STYLESHEETS,v 1.2 2002/04/01 22:26:22 allane Exp $
+
+

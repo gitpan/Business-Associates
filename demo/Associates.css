@@ -1,0 +1,305 @@
+@charset "ISO-8859-1";
+/* $Id: Associates.css,v 1.2 2002/04/02 08:32:37 allane Exp $ */
+/* Associates.css - Default stylesheet for the Associates package */
+/*
+
+Copyright (c) 2002 Allan Engelhardt <allane@cybaea.com>
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
+USA
+
+*/
+
+/* Predefined colors:
+aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, 
+purple, red, silver, teal, white, and yellow. 
+*/
+
+
+div.Associates {
+	page-break-inside:	avoid;
+	margin-top:		0.5ex;
+	margin-bottom:		0.5ex;
+}
+
+div.Associates > div > table {
+	background:		inherit;
+	border-width:		thin;
+	border-style:		solid;
+}
+
+div.Associates table td.A__image_top,
+div.Associates table td.A__image_left,
+div.Associates table td.A__image_right,
+div.Associates table td.A__image_bottom
+{
+	background:		white;
+	text-align:		center;
+	border-style:		none;
+}
+
+div.Associates > div > table td.A__data_table {
+	text-align:		center;
+}
+
+div.Associates table.A__data_table {
+	width:			100%;
+	background:		silver;
+}
+
+div.Associates table.A__data_table td.A__cover_image{
+	background:		inherit;
+	text-align:		center;
+}
+
+div.Associates table.A__data_table td.A__text {
+	width:			8em;
+	font-size:		small;
+	color:			black;
+}
+
+div.Associates table.A__data_table td.A__text div.A_title a:link,
+div.Associates table.A__data_table td.A__text div.A_title a:visited
+{
+	color:			inherit;
+	text-decoration:	underline;
+}
+
+div.Associates table.A__data_table td.A__text div.A_ranking:before {
+	content:		"Rank: ";
+	font-style:		bold;
+}
+div.Associates table.A__data_table td.A__text div.A_ranking {
+	display:		none;
+	font-style:		bold;
+}
+
+/* In the following section we make the title follow the author
+   on a single line with a colon to separate them. */
+
+div.Associates table.A__data_table td.A__text div.A_author,
+div.Associates table.A__data_table td.A__text div.A_director
+{
+	display:		inline;
+}
+div.Associates table.A__data_table td.A__text div.A_director:after {
+	content:		": ";
+}
+
+div.Associates table.A__data_table td.A__text div.A_title {
+	display:		inline;
+}
+
+/* Other settings */
+
+div.Associates table.A__data_table td.A__text div.A_title {
+	font-style:		italic;
+}
+
+div.Associates table.A__data_table td.A__text div.A_release_date:before {
+	content:		"Released: "
+}
+div.Associates table.A__data_table td.A__text div.A_release_date {
+	display:		block;
+	padding-top:		1ex;
+	font-size:		x-small;
+}
+
+div.Associates table.A__data_table td.A__text div.A_binding {
+}
+
+div.Associates table.A__data_table td.A__text div.A_availability {
+}
+
+div.Associates table.A__data_table td.A__text div.A_asin:before {
+	content:		"ASIN ";
+}
+
+/* Variations */
+
+/* DVDs are different from books */
+div.Associates > div.DVDs > table
+{
+	border-width:		medium;
+	border-style:		ridge;
+}
+div.Associates div.DVDs table.A__data_table td.A__text 
+{
+	width:			10em;
+	background:		teal;
+	color:			white;
+	font-size:		medium;
+}
+div.Associates div.DVDs table.A__data_table td.A__text 
+div.A_release_date,
+div.Associates div.DVDs table.A__data_table td.A__text 
+div.A_binding,
+div.Associates div.DVDs table.A__data_table td.A__text 
+div.A_asin
+{
+	display:		none;
+}
+
+div.Associates div.DVDs table.A__data_table td.A__text 
+div.A_ranking
+{
+	display:		block;
+}
+
+/* And Electronics is also special */
+
+div.Associates div.Electronics table,
+div.Associates div.Electronics table td.A__image_top,
+div.Associates div.Electronics table td.A__image_left,
+div.Associates div.Electronics table td.A__image_right,
+div.Associates div.Electronics table td.A__image_bottom,
+div.Associates div.Electronics table.A__data_table td.A__text
+{
+	background:		black;
+	color:			silver;
+	font-weight:		bold;
+}
+div.Associates div.Electronics table.A__data_table td.A__text
+div.A_author,
+div.Associates div.Electronics table.A__data_table td.A__text
+div.A_director,
+div.Associates div.Electronics table.A__data_table td.A__text
+div.A_binding,
+div.Associates div.Electronics table.A__data_table td.A__text
+div.A_asin,
+div.Associates div.Electronics table.A__data_table td.A__text
+div.A_release_date
+{
+	display:		none;
+}
+
+
+/* left_ad is one of our private styles: see index.shtml  */
+
+div.left_ad
+div.Associates table 
+table.A__data_table td.A__text
+{
+	background:		#FFFFCC;
+	width:			5em;
+}
+div.left_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_release_date,
+div.left_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_asin,
+div.left_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_binding
+{
+	display:		none;
+}
+
+/* text_ad is another of our styles.  Used for small, text-only ads */
+
+div.text_ad {
+	margin:			0.1ex 1em;
+}
+div.text_ad
+div.Associates table {
+	border-style:		dotted;
+	background:		white;
+}
+
+div.text_ad
+div.Associates table table.A__data_table,
+
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__text
+{
+	background:		white;
+	color:			inherit;
+	border-style:		none;
+}
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__cover_image
+{
+	display:		none;
+}
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_release_date,
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_asin,
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_binding
+{
+	display:		none;
+}
+div.text_ad
+div.Associates table 
+table.A__data_table td.A__text div.A_author:before
+{
+	content:	"I recommend: \A";
+	font-weight:	bold;
+}
+
+/* Just to show you don't need inline styles to float: */
+
+div.Associates table.right_float
+{
+	float:			right;
+}
+
+/* right_dvd is right aligned text */
+
+div.right_dvd
+div.Associates div.DVDs table.A__data_table td.A__text 
+{
+	text-align:		right;
+}
+
+
+
+
+.big_box
+div.Associates table
+{
+	background:		teal;
+}
+
+.big_box
+div.Associates table.A__data_table td.A__text {
+	color:			yellow;
+	width:			10em;
+	font-family:		sans-serif;
+}
+.big_box
+div.Associates table.A__data_table td.A__text
+div.A_asin
+{
+	display:		none;
+}
+
+.big_box
+div.Associates table.A__data_table td.A__text div.A_ranking
+{
+	display:		block;
+}
+
+/* Predefined colors:
+aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, 
+purple, red, silver, teal, white, and yellow. 
+*/

@@ -1,0 +1,87 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="/Associates.css" />
+ <title>Test of Associates pacakage</title>
+</head>
+<body>
+
+<center>
+<!--#include virtual="/cgi-bin/a.pl?keywords=xml&mode=books&ss=Associates&width=3&height=1" -->
+</center>
+
+<h1>Test of Associates package</h1>
+
+<p>
+<div class="text_ad">
+<!--#include virtual="/cgi-bin/a.pl?class='right_float'&keywords=apache+web+server&mode=books&ss=Associates&width=1&height=1&img_src_top='/amazon/126X32-w-logo.gif'&images='bottom'" --></div>
+<div style="float: left; padding-right: 1em;" class="left_ad">
+<!--#include virtual="/cgi-bin/a.pl?keywords=html&mode=books&ss=Associates&width=2&height=1&images='none'" --></center>
+</div>
+
+This page demonstrates some of the forms of the advertising blocks
+that you can easily make using the <code>Associates</code> package</p>
+
+
+<p>The examples here use more inline HTML than you would normally do
+(you <em>do</em> use stylesheets, don't you?), but that is for
+illutration only.  </p>
+
+
+<p>The banner at the top was genereated with the code below. This is a server-side include that simply inserts the output from the cgi script <code>a.pl</code> into the current document.  In fact, <em>all</em> the ads on this page were done with that sincle cgi script, only varying the parameters and editing the cascading style sheet (CSS) to suit.
+<blockquote>
+<pre>
+&lt;!--#include virtual="/cgi-bin/a.pl?keywords=xml&mode=books&ss=Associates&width=3&height=1" --&gt;
+</pre>
+</blockquote></p>
+
+
+<p>
+<div style="float: right; padding-left: 1em;" class="right_dvd">
+<!--#include virtual="/cgi-bin/a.pl?type=browse&keywords=163306&mode=dvd&ss=AssociatesRight&width=2&height=1&images='top'&img_src_top='/amazon/gnshop468x60.gif'" --></div>
+<div style="float: left" class="text_ad">
+<!--#include virtual="/cgi-bin/a.pl?keywords=Larry+Wall&mode=books&ss=Associates&width=1&height=1&img_src_top='/amazon/126X32-w-logo.gif'&images='none'" -->
+</div>
+
+As you can see, a wide variety of shapes are readily available,
+including text and images, text only, and image only.  You can specify
+fixed images to go on any of the four sides of the box, and they can
+be your own images or downloads from the Associates area Amazon.com.
+By default these staic images link to Amazon.com with your Associates
+Id already included in the link.  Notice the inserted text (<b>I
+recommend:&nbsp;</b>) on the box at the right and the different font in the
+box below.  Notice the different sorting and longer author names in
+the list below, and that is is a multi-product ad.  The code for this was eight lines.  In the DVD ad on
+the right, the text and images are swapped.  As an example, we present
+the <em>complete</em> code required to to this:
+
+
+<div style="float: left; padding-right: 1em;">
+<!--#include virtual="/cgi-bin/a.pl?keywords=canon+slr&mode=photo&ss=Associates&width=1&height=1&max_title='60'&img_src_top='/amazon/cp_pic_88x31.gif'" --></center>
+</div>
+
+<blockquote>
+<pre>
+&lt;xsl:import href="Associates.xslt" /&gt;
+&lt;xsl:template name="do_product_content"&gt;
+  &lt;xsl:call-template name="do_product_text" /&gt;
+  &lt;xsl:call-template name="do_product_cover_image" /&gt;
+&lt;/xsl:template&gt;
+</pre>
+</blockquote>
+
+
+That all there is to it!  Can you guess what the default template
+looks like?  </p>
+
+
+
+<p>Of course you can also create browse-based ad boxes as the photo ad
+at the right shows .  Yes, it is really done with the same old script.
+
+<br clear="left" />
+<center class="big_box">
+<!--#include virtual="/cgi-bin/a.pl?keywords=adams+douglas&mode=books+software+videogames+dvd+vhs&ss=AssociatesArtist&width=5&height=3&images='none'" -->
+</center>
+
+</body>
+</html>
